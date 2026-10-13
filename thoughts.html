@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-reduced-motion="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Becoming — Thought Studio. Five-step non-clinical reflection workspace." />
+  <meta name="theme-color" content="#061317" id="meta-theme-color" />
+  <title>Becoming — Thought Studio</title>
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    (function () {
+      try {
+        var raw = localStorage.getItem('becoming_v1_prefs');
+        var prefs = raw ? JSON.parse(raw) : {};
+        var theme = prefs.theme || 'dark';
+        if (theme === 'system') {
+          theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+        var sysMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var reduced = prefs.reducedMotion === true || sysMotion;
+        document.documentElement.setAttribute('data-reduced-motion', reduced ? 'true' : 'false');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="thoughts">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="ambient-sanctuary" aria-hidden="true">
+    <div class="ambient-glow ambient-glow--top"></div>
+    <div class="ambient-glow ambient-glow--bottom"></div>
+    <svg class="ambient-currents" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
+      <path class="current-line current-line--1" d="M-100 180 C 320 90, 680 310, 1080 190 C 1280 130, 1420 210, 1560 170" />
+      <path class="current-line current-line--2" d="M-120 460 C 260 360, 740 580, 1140 430 C 1340 355, 1460 440, 1580 410" />
+      <path class="current-line current-line--3" d="M-80 740 C 380 650, 820 830, 1220 700 C 1380 645, 1480 710, 1560 690" />
+    </svg>
+  </div>
+
+  <div class="app-shell">
+    <aside class="sanctuary-nav" aria-label="Primary Navigation">
+      <div class="nav-brand">
+        <a href="index.html" class="brand-link" aria-label="Becoming — Return to Today's Space">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.45" />
+              <path d="M7 17.5C10.5 13.5 14.5 13.5 16.5 16.5C18.5 19.5 22 19.5 25 15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <circle cx="16" cy="10.5" r="2" fill="currentColor" />
+            </svg>
+          </span>
+          <div class="brand-text">
+            <span class="brand-name">Becoming</span>
+            <span class="brand-tagline">Your quiet space</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="nav-menu" aria-label="Sections">
+        <ul class="nav-list">
+          <li>
+            <a href="index.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path><path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path><path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path>
+              </svg>
+              <span class="nav-label">Today's Space</span>
+            </a>
+          </li>
+          <li>
+            <a href="week.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                <line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line>
+              </svg>
+              <span class="nav-label">Your Week</span>
+            </a>
+          </li>
+          <li>
+            <a href="journey.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 17c3-6 6-6 9 0s6 6 9 0"></path><path d="M3 10c3-6 6-6 9 0s6 6 9 0" opacity="0.5"></path>
+              </svg>
+              <span class="nav-label">My Journey</span>
+            </a>
+          </li>
+          <li>
+            <a href="journal.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                <path d="M8 7h6"></path><path d="M8 11h8"></path>
+              </svg>
+              <span class="nav-label">Journal</span>
+            </a>
+          </li>
+          <li>
+            <a href="pause.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle>
+              </svg>
+              <span class="nav-label">Pause</span>
+            </a>
+          </li>
+          <li>
+            <a href="thoughts.html" class="nav-item is-active" aria-current="page">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path><path d="M19 3v4"></path><path d="M21 5h-4"></path>
+              </svg>
+              <span class="nav-label">Thought Studio</span>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line>
+                <circle cx="9" cy="6" r="2"></circle><circle cx="15" cy="12" r="2"></circle><circle cx="10" cy="18" r="2"></circle>
+              </svg>
+              <span class="nav-label">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-footer">
+        <p class="nav-philosophy">
+          "I am not trying to become worthy of love. I am learning how to treat myself as someone who already deserves it."
+        </p>
+        <div class="nav-storage-pill">
+          <svg class="icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span>Private local sanctuary</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="sanctuary-workspace">
+      <header class="sanctuary-header">
+        <div class="header-left">
+          <span class="mobile-wordmark">Becoming</span>
+          <p class="header-greeting" id="header-greeting">Make room for yourself.</p>
+          <p class="header-date" id="header-date">Loading local date...</p>
+        </div>
+        <div class="header-controls">
+          <button type="button" class="icon-btn" id="quick-theme-btn" aria-label="Switch color theme" title="Switch color theme">
+            <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path><path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path><path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </button>
+          <a href="settings.html" class="icon-btn" aria-label="Open Settings" title="Settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line>
+              <circle cx="9" cy="6" r="2"></circle><circle cx="15" cy="12" r="2"></circle><circle cx="10" cy="18" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <main id="main-content" class="sanctuary-main">
+        <section id="view-thoughts" class="app-view is-active" aria-labelledby="thoughts-heading">
+          <div class="view-intro">
+            <div class="view-intro__text">
+              <span class="eyebrow-label">Curiosity Over Judgment</span>
+              <h1 id="thoughts-heading" class="view-title">Thought Studio</h1>
+              <p class="view-description">
+                A non-clinical space to explore difficult thoughts with honesty and balance. Every step is optional—you can move freely between steps, save partway through, or stop whenever you want.
+              </p>
+            </div>
+          </div>
+
+          <div class="thought-studio-layout">
+            <div class="thought-studio-stage">
+              <div class="thought-stepper" role="tablist" aria-label="Thought Reflection Steps">
+                <button type="button" class="step-pill is-active" data-thought-step="1" role="tab" aria-selected="true">
+                  <span class="step-num">1</span><span class="step-name">Notice</span>
+                </button>
+                <button type="button" class="step-pill" data-thought-step="2" role="tab" aria-selected="false">
+                  <span class="step-num">2</span><span class="step-name">Understand</span>
+                </button>
+                <button type="button" class="step-pill" data-thought-step="3" role="tab" aria-selected="false">
+                  <span class="step-num">3</span><span class="step-name">Examine</span>
+                </button>
+                <button type="button" class="step-pill" data-thought-step="4" role="tab" aria-selected="false">
+                  <span class="step-num">4</span><span class="step-name">Balance</span>
+                </button>
+                <button type="button" class="step-pill" data-thought-step="5" role="tab" aria-selected="false">
+                  <span class="step-num">5</span><span class="step-name">Next Step</span>
+                </button>
+              </div>
+
+              <input type="hidden" id="ts-editing-id" value="" />
+
+              <div class="ts-step-pane is-active" data-ts-pane="1">
+                <span class="step-optional-tag">Step 1 of 5 · Optional</span>
+                <h2 class="ts-question">What have you been telling yourself?</h2>
+                <p class="ts-guidance">Write the thought or belief honestly as it shows up in your mind. You do not need to censor it or immediately prove it wrong.</p>
+                <label for="ts-step1-input" class="sr-only">What have you been telling yourself?</label>
+                <textarea id="ts-step1-input" class="sanctuary-textarea ts-textarea" rows="5" placeholder="For example: 'Because I struggled to get started today, I'm falling behind everyone else...'"></textarea>
+              </div>
+
+              <div class="ts-step-pane" data-ts-pane="2" hidden>
+                <span class="step-optional-tag">Step 2 of 5 · All questions optional</span>
+                <h2 class="ts-question">Understand the context around the thought</h2>
+                <p class="ts-guidance">Difficult thoughts usually appear for a reason. Explore any of the questions below that feel helpful right now.</p>
+                <div class="ts-field-group">
+                  <label for="ts-step2-context" class="ts-sublabel">What happened that brought this thought up?</label>
+                  <textarea id="ts-step2-context" class="sanctuary-textarea" rows="2" placeholder="A situation, a comparison, fatigue, an unfinished task..."></textarea>
+                </div>
+                <div class="ts-field-group">
+                  <label for="ts-step2-feeling" class="ts-sublabel">What feeling might be connected to it?</label>
+                  <textarea id="ts-step2-feeling" class="sanctuary-textarea" rows="2" placeholder="Tired, uncertain, overwhelmed, frustrated, anxious..."></textarea>
+                </div>
+                <div class="ts-field-group">
+                  <label for="ts-step2-fear" class="ts-sublabel">Is there something you are afraid this thought might mean?</label>
+                  <textarea id="ts-step2-fear" class="sanctuary-textarea" rows="2" placeholder="What is the deeper worry underneath it?"></textarea>
+                </div>
+              </div>
+
+              <div class="ts-step-pane" data-ts-pane="3" hidden>
+                <span class="step-optional-tag">Step 3 of 5 · Optional</span>
+                <h2 class="ts-question">What supports this thought, and what might it be leaving out?</h2>
+                <p class="ts-guidance">A thought does not have to be 100% false to be incomplete. Notice where facts end and where harsh generalizations begin.</p>
+                <div class="ts-helper-lenses">
+                  <span class="lens-badge">Lens: Observable facts vs. assumptions</span>
+                  <span class="lens-badge">Lens: One hard moment vs. your whole character</span>
+                </div>
+                <div class="ts-field-group">
+                  <label for="ts-step3-supports" class="ts-sublabel">What makes this thought feel true or understandable right now?</label>
+                  <textarea id="ts-step3-supports" class="sanctuary-textarea" rows="3" placeholder="Acknowledge the real difficulty or facts without exaggeration..."></textarea>
+                </div>
+                <div class="ts-field-group">
+                  <label for="ts-step3-omits" class="ts-sublabel">What context, effort, or nuance might this thought be leaving out?</label>
+                  <textarea id="ts-step3-omits" class="sanctuary-textarea" rows="3" placeholder="What would a fair observer notice that self-criticism ignores?"></textarea>
+                </div>
+              </div>
+
+              <div class="ts-step-pane" data-ts-pane="4" hidden>
+                <span class="step-optional-tag">Step 4 of 5 · Optional</span>
+                <h2 class="ts-question">What is a more balanced way to understand this?</h2>
+                <p class="ts-guidance">Aim for something believable and grounded—not forced positivity.</p>
+                <label for="ts-step4-balanced" class="sr-only">Balanced perspective</label>
+                <textarea id="ts-step4-balanced" class="sanctuary-textarea ts-textarea" rows="5" placeholder="For example: 'Today felt scattered, and starting was genuinely hard. That doesn't erase my capability—it just means I need a smaller starting point right now.'"></textarea>
+              </div>
+
+              <div class="ts-step-pane" data-ts-pane="5" hidden>
+                <span class="step-optional-tag">Step 5 of 5 · Optional</span>
+                <h2 class="ts-question">What is one kind or practical thing you could do next?</h2>
+                <p class="ts-guidance">You can leave this blank if simply reflecting is enough for today.</p>
+                <label for="ts-step5-next" class="sr-only">Small next step</label>
+                <textarea id="ts-step5-next" class="sanctuary-textarea ts-textarea" rows="4" placeholder="For example: 'Get a glass of water, rest for ten minutes, or work on just the first paragraph...'"></textarea>
+              </div>
+
+              <div class="ts-footer">
+                <div class="ts-step-nav">
+                  <button type="button" class="btn btn--subtle btn--sm" id="ts-prev-btn" disabled>Previous step</button>
+                  <button type="button" class="btn btn--subtle btn--sm" id="ts-next-btn">Next step</button>
+                </div>
+                <div class="ts-save-actions">
+                  <button type="button" class="btn btn--ghost btn--sm" id="ts-reset-btn">Clear form</button>
+                  <button type="button" class="btn btn--primary" id="ts-save-btn">Save Reflection</button>
+                </div>
+              </div>
+            </div>
+
+            <aside class="thought-studio-archive" aria-label="Saved thought reflections">
+              <h2 class="panel-title">Saved Reflections</h2>
+              <p class="panel-subtitle">Stored privately in your browser.</p>
+              <div id="ts-saved-list" class="ts-saved-list"></div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div id="confirm-modal-backdrop" class="modal-backdrop" hidden>
+    <div id="confirm-modal" class="sanctuary-modal confirm-modal" role="alertdialog" aria-modal="true" aria-labelledby="confirm-modal-title" aria-describedby="confirm-modal-desc">
+      <h2 id="confirm-modal-title" class="modal-title">Confirm Action</h2>
+      <p id="confirm-modal-desc" class="modal-purpose"></p>
+      <div class="confirm-modal-actions">
+        <button type="button" class="btn btn--ghost" id="confirm-cancel-btn">Cancel</button>
+        <button type="button" class="btn btn--danger" id="confirm-accept-btn">Confirm</button>
+      </div>
+    </div>
+  </div>
+  <div id="sanctuary-toast" class="sanctuary-toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

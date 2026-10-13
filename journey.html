@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-reduced-motion="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Becoming — My Journey. Personal participation history without streaks or pressure." />
+  <meta name="theme-color" content="#061317" id="meta-theme-color" />
+  <title>Becoming — My Journey</title>
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    (function () {
+      try {
+        var raw = localStorage.getItem('becoming_v1_prefs');
+        var prefs = raw ? JSON.parse(raw) : {};
+        var theme = prefs.theme || 'dark';
+        if (theme === 'system') {
+          theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+        var sysMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var reduced = prefs.reducedMotion === true || sysMotion;
+        document.documentElement.setAttribute('data-reduced-motion', reduced ? 'true' : 'false');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="journey">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="ambient-sanctuary" aria-hidden="true">
+    <div class="ambient-glow ambient-glow--top"></div>
+    <div class="ambient-glow ambient-glow--bottom"></div>
+    <svg class="ambient-currents" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
+      <path class="current-line current-line--1" d="M-100 180 C 320 90, 680 310, 1080 190 C 1280 130, 1420 210, 1560 170" />
+      <path class="current-line current-line--2" d="M-120 460 C 260 360, 740 580, 1140 430 C 1340 355, 1460 440, 1580 410" />
+      <path class="current-line current-line--3" d="M-80 740 C 380 650, 820 830, 1220 700 C 1380 645, 1480 710, 1560 690" />
+    </svg>
+  </div>
+
+  <div class="app-shell">
+    <aside class="sanctuary-nav" aria-label="Primary Navigation">
+      <div class="nav-brand">
+        <a href="index.html" class="brand-link" aria-label="Becoming — Return to Today's Space">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.45" />
+              <path d="M7 17.5C10.5 13.5 14.5 13.5 16.5 16.5C18.5 19.5 22 19.5 25 15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <circle cx="16" cy="10.5" r="2" fill="currentColor" />
+            </svg>
+          </span>
+          <div class="brand-text">
+            <span class="brand-name">Becoming</span>
+            <span class="brand-tagline">Your quiet space</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="nav-menu" aria-label="Sections">
+        <ul class="nav-list">
+          <li>
+            <a href="index.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path><path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path><path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path>
+              </svg>
+              <span class="nav-label">Today's Space</span>
+            </a>
+          </li>
+          <li>
+            <a href="week.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                <line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line>
+              </svg>
+              <span class="nav-label">Your Week</span>
+            </a>
+          </li>
+          <li>
+            <a href="journey.html" class="nav-item is-active" aria-current="page">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 17c3-6 6-6 9 0s6 6 9 0"></path><path d="M3 10c3-6 6-6 9 0s6 6 9 0" opacity="0.5"></path>
+              </svg>
+              <span class="nav-label">My Journey</span>
+            </a>
+          </li>
+          <li>
+            <a href="journal.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                <path d="M8 7h6"></path><path d="M8 11h8"></path>
+              </svg>
+              <span class="nav-label">Journal</span>
+            </a>
+          </li>
+          <li>
+            <a href="pause.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle>
+              </svg>
+              <span class="nav-label">Pause</span>
+            </a>
+          </li>
+          <li>
+            <a href="thoughts.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path><path d="M19 3v4"></path><path d="M21 5h-4"></path>
+              </svg>
+              <span class="nav-label">Thought Studio</span>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line>
+                <circle cx="9" cy="6" r="2"></circle><circle cx="15" cy="12" r="2"></circle><circle cx="10" cy="18" r="2"></circle>
+              </svg>
+              <span class="nav-label">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-footer">
+        <p class="nav-philosophy">
+          "I am not trying to become worthy of love. I am learning how to treat myself as someone who already deserves it."
+        </p>
+        <div class="nav-storage-pill">
+          <svg class="icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span>Private local sanctuary</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="sanctuary-workspace">
+      <header class="sanctuary-header">
+        <div class="header-left">
+          <span class="mobile-wordmark">Becoming</span>
+          <p class="header-greeting" id="header-greeting">Make room for yourself.</p>
+          <p class="header-date" id="header-date">Loading local date...</p>
+        </div>
+        <div class="header-controls">
+          <button type="button" class="icon-btn" id="quick-theme-btn" aria-label="Switch color theme" title="Switch color theme">
+            <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path><path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path><path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </button>
+          <a href="settings.html" class="icon-btn" aria-label="Open Settings" title="Settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line>
+              <circle cx="9" cy="6" r="2"></circle><circle cx="15" cy="12" r="2"></circle><circle cx="10" cy="18" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <main id="main-content" class="sanctuary-main">
+        <section id="view-journey" class="app-view is-active" aria-labelledby="journey-heading">
+          <div class="view-intro">
+            <div class="view-intro__text">
+              <span class="eyebrow-label">Quiet Continuity</span>
+              <h1 id="journey-heading" class="view-title">My Journey</h1>
+              <p class="view-description">
+                A calm record of the days you made room for yourself. There are no streaks to protect and no scores to maintain—every single step stands on its own.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-metrics" aria-label="Personal participation overview">
+            <div class="journey-metric-item">
+              <span class="metric-value" id="journey-days-count">0</span>
+              <span class="metric-label">Days you showed up for yourself</span>
+              <span class="metric-note">Completing 1 activity counts as a full day</span>
+            </div>
+            <div class="journey-metric-item">
+              <span class="metric-value" id="journey-activities-count">0</span>
+              <span class="metric-label">Small actions completed</span>
+              <span class="metric-note">Across your personal history</span>
+            </div>
+            <div class="journey-metric-item">
+              <span class="metric-value" id="journey-reflections-count">0</span>
+              <span class="metric-label">Reflections written</span>
+              <span class="metric-note">From activities and weekly check-ins</span>
+            </div>
+          </div>
+
+          <div class="journey-grid">
+            <div class="journey-panel journey-panel--calendar">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Participation Calendar</h2>
+                  <p class="panel-subtitle">A luminous dot marks any day you completed at least one activity.</p>
+                </div>
+                <div class="calendar-nav">
+                  <button type="button" class="icon-btn icon-btn--sm" id="cal-prev-btn" aria-label="Previous month">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+                  </button>
+                  <span class="calendar-month-label" id="cal-month-label">Month Year</span>
+                  <button type="button" class="icon-btn icon-btn--sm" id="cal-next-btn" aria-label="Next month">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="calendar-weekdays" aria-hidden="true">
+                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+              </div>
+              <div id="journey-calendar-grid" class="calendar-days-grid" role="grid" aria-label="Monthly participation"></div>
+              <div id="journey-day-detail" class="calendar-day-inspector" hidden></div>
+            </div>
+
+            <div class="journey-side-stack">
+              <div class="journey-panel">
+                <h2 class="panel-title">Areas You've Explored</h2>
+                <p class="panel-subtitle">Categories you have spent time with so far.</p>
+                <div id="journey-categories-list" class="categories-explored-list"></div>
+              </div>
+
+              <div class="journey-panel journey-panel--prompt">
+                <div class="panel-header">
+                  <div>
+                    <span class="eyebrow-label">Optional Weekly Check-In</span>
+                    <h2 class="panel-title">Pause &amp; Look Back</h2>
+                  </div>
+                  <button type="button" class="btn btn--subtle btn--sm" id="journey-new-prompt-btn">Another question</button>
+                </div>
+                <p class="weekly-prompt-question" id="journey-weekly-prompt-text">
+                  "What is one small way you treated yourself with patience recently?"
+                </p>
+                <div class="weekly-prompt-form">
+                  <label for="journey-weekly-reflection-input" class="sr-only">Your reflection</label>
+                  <textarea id="journey-weekly-reflection-input" class="sanctuary-textarea" rows="3" placeholder="Write a few honest lines if you'd like..."></textarea>
+                  <div class="weekly-prompt-actions">
+                    <button type="button" class="btn btn--primary btn--sm" id="journey-save-weekly-btn">Save reflection</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="journey-history-section">
+            <div class="history-tabs" role="tablist" aria-label="Journey History Views">
+              <button type="button" class="history-tab is-active" data-journey-tab="timeline" role="tab" aria-selected="true">
+                Completed Activities Timeline
+              </button>
+              <button type="button" class="history-tab" data-journey-tab="reflections" role="tab" aria-selected="false">
+                Saved Reflections
+              </button>
+            </div>
+            <div id="journey-timeline-panel" class="history-tab-panel">
+              <div id="journey-timeline-list" class="timeline-stream"></div>
+            </div>
+            <div id="journey-reflections-panel" class="history-tab-panel" hidden>
+              <div id="journey-reflections-list" class="reflections-stream"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div id="confirm-modal-backdrop" class="modal-backdrop" hidden>
+    <div id="confirm-modal" class="sanctuary-modal confirm-modal" role="alertdialog" aria-modal="true" aria-labelledby="confirm-modal-title" aria-describedby="confirm-modal-desc">
+      <h2 id="confirm-modal-title" class="modal-title">Confirm Action</h2>
+      <p id="confirm-modal-desc" class="modal-purpose"></p>
+      <div class="confirm-modal-actions">
+        <button type="button" class="btn btn--ghost" id="confirm-cancel-btn">Cancel</button>
+        <button type="button" class="btn btn--danger" id="confirm-accept-btn">Confirm</button>
+      </div>
+    </div>
+  </div>
+  <div id="sanctuary-toast" class="sanctuary-toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

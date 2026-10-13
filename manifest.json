@@ -1,0 +1,17 @@
+{
+  "name": "Becoming — A Digital Sanctuary",
+  "short_name": "Becoming",
+  "description": "A private, ADHD-friendly digital sanctuary for self-respect, self-trust, and quiet growth.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#061317",
+  "theme_color": "#061317",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

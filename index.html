@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-reduced-motion="false">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Becoming — Today's Space. A private, ADHD-friendly digital sanctuary." />
+  <meta name="theme-color" content="#061317" id="meta-theme-color" />
+  <title>Becoming — Today's Space</title>
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    (function () {
+      try {
+        var raw = localStorage.getItem('becoming_v1_prefs');
+        var prefs = raw ? JSON.parse(raw) : {};
+        var theme = prefs.theme || 'dark';
+        if (theme === 'system') {
+          theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+        var sysMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var reduced = prefs.reducedMotion === true || sysMotion;
+        document.documentElement.setAttribute('data-reduced-motion', reduced ? 'true' : 'false');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="today">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="ambient-sanctuary" aria-hidden="true">
+    <div class="ambient-glow ambient-glow--top"></div>
+    <div class="ambient-glow ambient-glow--bottom"></div>
+    <svg class="ambient-currents" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
+      <path class="current-line current-line--1" d="M-100 180 C 320 90, 680 310, 1080 190 C 1280 130, 1420 210, 1560 170" />
+      <path class="current-line current-line--2" d="M-120 460 C 260 360, 740 580, 1140 430 C 1340 355, 1460 440, 1580 410" />
+      <path class="current-line current-line--3" d="M-80 740 C 380 650, 820 830, 1220 700 C 1380 645, 1480 710, 1560 690" />
+    </svg>
+  </div>
+
+  <div class="app-shell">
+    <aside class="sanctuary-nav" aria-label="Primary Navigation">
+      <div class="nav-brand">
+        <a href="index.html" class="brand-link" aria-label="Becoming — Return to Today's Space">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.45" />
+              <path d="M7 17.5C10.5 13.5 14.5 13.5 16.5 16.5C18.5 19.5 22 19.5 25 15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <circle cx="16" cy="10.5" r="2" fill="currentColor" />
+            </svg>
+          </span>
+          <div class="brand-text">
+            <span class="brand-name">Becoming</span>
+            <span class="brand-tagline">Your quiet space</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="nav-menu" aria-label="Sections">
+        <ul class="nav-list">
+          <li>
+            <a href="index.html" class="nav-item is-active" aria-current="page">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path><path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path><path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path>
+              </svg>
+              <span class="nav-label">Today's Space</span>
+            </a>
+          </li>
+          <li>
+            <a href="week.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                <line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line>
+              </svg>
+              <span class="nav-label">Your Week</span>
+            </a>
+          </li>
+          <li>
+            <a href="journey.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 17c3-6 6-6 9 0s6 6 9 0"></path>
+                <path d="M3 10c3-6 6-6 9 0s6 6 9 0" opacity="0.5"></path>
+              </svg>
+              <span class="nav-label">My Journey</span>
+            </a>
+          </li>
+          <li>
+            <a href="journal.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                <path d="M8 7h6"></path><path d="M8 11h8"></path>
+              </svg>
+              <span class="nav-label">Journal</span>
+            </a>
+          </li>
+          <li>
+            <a href="pause.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle>
+              </svg>
+              <span class="nav-label">Pause</span>
+            </a>
+          </li>
+          <li>
+            <a href="thoughts.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                <path d="M19 3v4"></path><path d="M21 5h-4"></path>
+              </svg>
+              <span class="nav-label">Thought Studio</span>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line>
+                <circle cx="9" cy="6" r="2"></circle><circle cx="15" cy="12" r="2"></circle><circle cx="10" cy="18" r="2"></circle>
+              </svg>
+              <span class="nav-label">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-footer">
+        <p class="nav-philosophy">
+          "I am not trying to become worthy of love. I am learning how to treat myself as someone who already deserves it."
+        </p>
+        <div class="nav-storage-pill">
+          <svg class="icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span>Private local sanctuary</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="sanctuary-workspace">
+      <header class="sanctuary-header">
+        <div class="header-left">
+          <span class="mobile-wordmark">Becoming</span>
+          <p class="header-greeting" id="header-greeting">Make room for yourself.</p>
+          <p class="header-date" id="header-date">Loading local date...</p>
+        </div>
+        <div class="header-controls">
+          <button type="button" class="icon-btn" id="quick-theme-btn" aria-label="Switch color theme" title="Switch color theme">
+            <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path><path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path><path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </button>
+          <a href="settings.html" class="icon-btn" aria-label="Open Settings" title="Settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line>
+              <circle cx="9" cy="6" r="2"></circle><circle cx="15" cy="12" r="2"></circle><circle cx="10" cy="18" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <main id="main-content" class="sanctuary-main">
+        <section id="view-today" class="app-view is-active" aria-labelledby="today-hero-heading">
+          <div class="today-hero">
+            <div class="today-hero__content">
+              <div class="hero-eyebrow">
+                <span class="theme-pill" id="today-theme-pill">Today's Space</span>
+                <span class="hero-divider" aria-hidden="true"></span>
+                <span class="hero-rule-note">One small step counts as a full day</span>
+              </div>
+              <h1 id="today-hero-heading" class="today-hero__title">
+                You don't have to do everything. Just begin somewhere.
+              </h1>
+              <p class="today-hero__status" id="today-status-text" aria-live="polite">
+                Choose one small thing to begin.
+              </p>
+              <div class="today-hero__actions">
+                <button type="button" class="btn btn--primary" id="choose-for-me-btn">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z"></path>
+                  </svg>
+                  <span>Choose for me</span>
+                </button>
+                <a href="pause.html" class="btn btn--ghost" style="text-decoration:none;">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3.5"></circle>
+                  </svg>
+                  <span>Take a quiet pause</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="today-hero__art" aria-hidden="true">
+              <svg class="sanctuary-horizon-svg" viewBox="0 0 420 280" fill="none">
+                <defs>
+                  <linearGradient id="oceanDepthGrad" x1="210" y1="10" x2="210" y2="270" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="currentColor" stop-opacity="0.22" />
+                    <stop offset="100%" stop-color="currentColor" stop-opacity="0.0" />
+                  </linearGradient>
+                  <radialGradient id="sanctuaryOrb" cx="50%" cy="42%" r="48%">
+                    <stop offset="0%" stop-color="var(--accent-primary)" stop-opacity="0.34" />
+                    <stop offset="65%" stop-color="var(--accent-soft)" stop-opacity="0.08" />
+                    <stop offset="100%" stop-color="var(--accent-primary)" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+                <circle cx="240" cy="118" r="98" fill="url(#sanctuaryOrb)" />
+                <circle cx="240" cy="118" r="52" stroke="currentColor" stroke-opacity="0.28" stroke-width="1.2" />
+                <circle cx="240" cy="118" r="78" stroke="currentColor" stroke-opacity="0.14" stroke-width="1" stroke-dasharray="3 6" />
+                <path d="M10 175 C 95 140, 175 205, 265 168 C 330 140, 375 165, 412 152" stroke="currentColor" stroke-opacity="0.45" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M10 202 C 110 172, 195 228, 290 192 C 345 170, 382 190, 412 182" stroke="currentColor" stroke-opacity="0.28" stroke-width="1.25" stroke-linecap="round" />
+                <path d="M24 230 C 128 205, 215 250, 310 218 C 355 202, 388 215, 408 210" stroke="currentColor" stroke-opacity="0.16" stroke-width="1" stroke-linecap="round" />
+                <path d="M10 175 C 95 140, 175 205, 265 168 C 330 140, 375 165, 412 152 L 412 270 L 10 270 Z" fill="url(#oceanDepthGrad)" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="today-schedule">
+            <div class="section-bar">
+              <div>
+                <h2 class="section-title" id="today-day-heading">Today's Invitations</h2>
+                <p class="section-subtitle" id="today-theme-desc">Five gentle possibilities. Completing even one is enough.</p>
+              </div>
+              <div class="section-bar__meta">
+                <span class="participation-badge" id="today-participation-badge">No pressure to complete all five</span>
+              </div>
+            </div>
+
+            <div id="today-hidden-banner" class="subtle-banner" hidden>
+              <span id="today-hidden-banner-text">Some activities for today are currently hidden by your preferences.</span>
+              <button type="button" class="text-link-btn" id="today-restore-hidden-btn">Restore hidden activities</button>
+            </div>
+
+            <div id="today-activities-layout" class="today-activities-layout" aria-live="polite"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Activity Detail Modal -->
+  <div id="activity-modal-backdrop" class="modal-backdrop" hidden>
+    <div id="activity-modal" class="sanctuary-modal activity-modal" role="dialog" aria-modal="true" aria-labelledby="modal-activity-title">
+      <div class="modal-top-bar">
+        <div class="modal-badges">
+          <span class="category-tag" id="modal-activity-category">Category</span>
+          <span class="duration-tag" id="modal-activity-duration">5 minutes</span>
+          <span class="status-tag" id="modal-activity-status-pill" hidden>Completed</span>
+        </div>
+        <button type="button" class="icon-btn icon-btn--sm" id="modal-close-btn" aria-label="Close activity without completing">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-activity-title" class="modal-title">Activity Title</h2>
+        <p id="modal-activity-purpose" class="modal-purpose"></p>
+        <div class="approach-selector" role="group" aria-label="Choose your pace">
+          <button type="button" class="approach-tab is-active" id="modal-standard-tab">Full invitation</button>
+          <button type="button" class="approach-tab" id="modal-smaller-tab">Smaller version (low energy)</button>
+        </div>
+        <div id="modal-instructions-box" class="instructions-card">
+          <p id="modal-activity-instructions" class="instructions-text"></p>
+        </div>
+        <div id="modal-smaller-box" class="instructions-card instructions-card--smaller" hidden>
+          <span class="smaller-badge">1-Minute / Low-Friction Alternative</span>
+          <p id="modal-activity-smaller" class="instructions-text"></p>
+        </div>
+        <div class="modal-timer-box" id="modal-timer-section">
+          <div class="modal-timer-header">
+            <span class="timer-label">Optional Companion Timer</span>
+            <div class="timer-preset-chips">
+              <button type="button" class="mini-chip" data-modal-timer-set="60">1m</button>
+              <button type="button" class="mini-chip" data-modal-timer-set="180">3m</button>
+              <button type="button" class="mini-chip" data-modal-timer-set="300">5m</button>
+              <button type="button" class="mini-chip" data-modal-timer-set="600">10m</button>
+            </div>
+          </div>
+          <div class="modal-timer-main">
+            <span class="modal-timer-readout" id="modal-timer-display">05:00</span>
+            <div class="modal-timer-btns">
+              <button type="button" class="btn btn--subtle btn--sm" id="modal-timer-toggle-btn">Start timer</button>
+              <button type="button" class="btn btn--ghost btn--sm" id="modal-timer-reset-btn">Reset</button>
+            </div>
+          </div>
+        </div>
+        <div id="modal-voice-workspace" class="special-workspace" hidden>
+          <h3 class="workspace-heading">Private Voice Note (In-Memory)</h3>
+          <p class="workspace-note">Record a brief voice note privately in your browser. You do not have to listen to it afterward.</p>
+          <div class="voice-controls">
+            <button type="button" class="btn btn--subtle btn--sm" id="voice-record-btn">Start recording</button>
+            <button type="button" class="btn btn--subtle btn--sm" id="voice-stop-btn" hidden>Stop recording</button>
+            <span class="voice-status" id="voice-status-text">Ready</span>
+          </div>
+          <audio id="voice-audio-player" class="voice-player" controls hidden></audio>
+        </div>
+        <div id="modal-memory-workspace" class="special-workspace" hidden>
+          <h3 class="workspace-heading">Preserve an Ordinary Moment</h3>
+          <p class="workspace-note">Describe the moment below, or attach a lightweight private photo to keep locally.</p>
+          <label class="file-upload-btn btn btn--subtle btn--sm">
+            <span>Attach optional photo</span>
+            <input type="file" id="memory-photo-input" accept="image/*" hidden />
+          </label>
+          <div id="memory-photo-preview-wrap" class="memory-preview-wrap" hidden>
+            <img id="memory-photo-preview" alt="Attached memory preview" class="memory-preview-img" />
+            <button type="button" class="text-link-btn" id="memory-photo-remove-btn">Remove photo</button>
+          </div>
+        </div>
+        <div class="modal-reflection-box">
+          <label for="modal-reflection-input" class="reflection-label" id="modal-reflection-prompt">Optional reflection</label>
+          <textarea id="modal-reflection-input" class="sanctuary-textarea" rows="3" placeholder="Optional: Jot down a thought, or leave this blank..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="modal-footer-left">
+          <button type="button" class="text-link-btn" id="modal-swap-btn">Swap for another activity</button>
+          <span aria-hidden="true">·</span>
+          <button type="button" class="text-link-btn" id="modal-hide-btn">Hide activity</button>
+        </div>
+        <div class="modal-footer-right">
+          <button type="button" class="btn btn--ghost" id="modal-cancel-btn">Leave for now</button>
+          <button type="button" class="btn btn--primary" id="modal-complete-btn">Mark as Complete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Swap Activity Modal -->
+  <div id="swap-modal-backdrop" class="modal-backdrop" hidden>
+    <div id="swap-modal" class="sanctuary-modal swap-modal" role="dialog" aria-modal="true" aria-labelledby="swap-modal-title">
+      <div class="modal-top-bar">
+        <h2 id="swap-modal-title" class="modal-title">Choose an Alternative Activity</h2>
+        <button type="button" class="icon-btn icon-btn--sm" id="swap-modal-close-btn" aria-label="Close swap dialog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <p class="modal-purpose">Select any activity below to replace this slot for the selected day.</p>
+      <div id="swap-options-list" class="swap-options-list"></div>
+    </div>
+  </div>
+
+  <!-- Confirm Modal & Toast -->
+  <div id="confirm-modal-backdrop" class="modal-backdrop" hidden>
+    <div id="confirm-modal" class="sanctuary-modal confirm-modal" role="alertdialog" aria-modal="true" aria-labelledby="confirm-modal-title" aria-describedby="confirm-modal-desc">
+      <h2 id="confirm-modal-title" class="modal-title">Confirm Action</h2>
+      <p id="confirm-modal-desc" class="modal-purpose"></p>
+      <div class="confirm-modal-actions">
+        <button type="button" class="btn btn--ghost" id="confirm-cancel-btn">Cancel</button>
+        <button type="button" class="btn btn--danger" id="confirm-accept-btn">Confirm</button>
+      </div>
+    </div>
+  </div>
+  <div id="sanctuary-toast" class="sanctuary-toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
